@@ -71,6 +71,12 @@ class PermissionSeeder extends Seeder
             ['id'=>39,'name'=>"edit-blog",'slug'=>"edit-blog"],
             ['id'=>40,'name'=>"delete-blog",'slug'=>"delete-blog"],
 
+            ['id'=>42,'name'=>"list-gallery",'slug'=>"list-gallery"],
+            ['id'=>43,'name'=>"view-gallery",'slug'=>"view-gallery"],
+            ['id'=>44,'name'=>"add-gallery",'slug'=>"add-gallery"],
+            ['id'=>45,'name'=>"edit-gallery",'slug'=>"edit-gallery"],
+            ['id'=>46,'name'=>"delete-gallery",'slug'=>"delete-gallery"],
+
         ]);
     }
 }

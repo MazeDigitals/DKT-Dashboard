@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AdminProfileController;
 use App\Http\Controllers\Admin\AdminCategoryController;
-use App\Http\Controllers\Admin\{AdminProductController,AdminPageController,AdminBlogController};
+use App\Http\Controllers\Admin\{AdminProductController,AdminPageController,AdminBlogController,AdminGalleryController};
 
 /*
 |--------------------------------------------------------------------------
@@ -99,4 +99,16 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::post('blog/update/{id}', [AdminBlogController::class, 'update'])->name('admin.blog.update');
     Route::get('blog/delete/{id}', [AdminBlogController::class, 'destroy'])->name('admin.blog.destroy');
     Route::get('blog/show/{id}', [AdminBlogController::class, 'show'])->name('admin.blog.show');
+
+    Route::get('galleries', [AdminGalleryController::class, 'index'])->name('admin.galleries');
+    Route::post('galleries/fetch', [AdminGalleryController::class, 'fetch'])->name('admin.galleries.fetch');
+    Route::get('galleries/create', [AdminGalleryController::class, 'create'])->name('admin.galleries.create');
+    Route::post('galleries/store', [AdminGalleryController::class, 'store'])->name('admin.galleries.store');
+    Route::get('galleries/edit/{id}', [AdminGalleryController::class, 'edit'])->name('admin.galleries.edit');
+    Route::post('galleries/update/{id}', [AdminGalleryController::class, 'update'])->name('admin.galleries.update');
+    Route::get('galleries/delete/{id}', [AdminGalleryController::class, 'destroy'])->name('admin.galleries.destroy');
+    Route::get('galleries/show/{id}', [AdminGalleryController::class, 'show'])->name('admin.galleries.show');
+
+    Route::post('galleries/image/update/sequence/{id}', [AdminGalleryController::class, 'updateImageSequence'])->name('galleries.image.update.sequence');
+    Route::post('galleries/image/delete', [AdminGalleryController::class, 'removeGalleryImage'])->name('galleries.image.delete');
 });

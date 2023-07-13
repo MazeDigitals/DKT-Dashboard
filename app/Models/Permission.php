@@ -120,6 +120,17 @@ class Permission extends BaseModel
                 'delete-blog'
             ],
         ],
+
+        'gallery-managment' => [
+            'name' => 'Gallery Management',
+            'permissions' => [
+                'list-gallery',
+                'view-gallery',
+                'add-gallery',
+                'edit-gallery',
+                'delete-gallery'
+            ],
+        ],
         
     ];
 

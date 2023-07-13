@@ -47,6 +47,24 @@ if( isset($page) ){
         </li>
         @endif
 
+        @can(App\Models\Blogs::LIST_PERMISSION)
+        <li class="@if( $pageName == 'blog_management' ) nav-active @endif">
+            <a href="{{route('admin.blog')}}">
+                <i class="icon icon-list3 s-18"></i> 
+                <span>Blog Management</span> 
+            </a>
+        </li>
+        @endif
+
+        @can(App\Models\Gallery::LIST_PERMISSION)
+        <li class="@if( $pageName == 'gallery_management' ) nav-active @endif">
+            <a href="{{route('admin.galleries')}}">
+                <i class="icon icon-list3 s-18"></i> 
+                <span>Gallery Management</span> 
+            </a>
+        </li>
+        @endif
+
         @can(App\Models\User::LIST_PERMISSION)
         <li class="@if( $pageName == 'customer_management' ) nav-active @endif">
             <a href="{{route('admin.customers')}}">
