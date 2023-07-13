@@ -22,7 +22,11 @@ Route::get('page',[PageController::class,'getPage']);
 Route::get('banner/{id}',[PageController::class,'getBanner']);
 Route::get('blog/category',[PageController::class,'getBlogCategory']);
 Route::get('blog/{page}',[PageController::class,'getBlog']);
+Route::get('blog/{id}',[PageController::class,'getBlogById']);
 
 Route::get('category',[ProductController::class,'getCategory']);
 Route::get('products/{category_id}',[ProductController::class,'getProducts']);
 Route::get('product/{id}',[ProductController::class,'getProduct']);
+
+Route::get('gallery',[PageController::class,'getGallery']);
+Route::get('gallery/{id}',[PageController::class,'getGalleryImage']);

@@ -19,7 +19,7 @@ class ProductController extends Controller
         if(!$category){
             return $this->response(false,null,'Record Not Found',422);
         }
-        $product = Product::where('category_id',$category->id)->where('status',1)->get();
+        $product = Product::where('category_id',$category->id)->where('status',1)->paginate(10);
         return $this->response(true,$product,'Product fetch successfully',200);
     }
 
