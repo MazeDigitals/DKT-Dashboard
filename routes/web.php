@@ -50,7 +50,7 @@ require __DIR__.'/auth.php';
  */
 Route::prefix('admin')->middleware('auth')->group(function () {
     
-    Route::get('dashboard', [AdminHomeController::class, 'index'])->name('home');
+    Route::get('/', [AdminHomeController::class, 'index'])->name('home');
 
     //Password reset
     Route::get('password-reset', [AdminProfileController::class, 'passwordReset'])->name('admin.profile.password_reset');
