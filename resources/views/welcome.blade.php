@@ -63,7 +63,7 @@
                         
                         <div class="p-6">
                             <div class="flex items-center">
-                                <img src="{{asset('admin/assets/img/logo/logo.png')}}" alt="AG Auctions" height="140">
+                                <img src="{{asset('admin/assets/img/logo/DKT.png')}}" alt="AG Auctions" height="140">
                             </div>
                         </div>
 
