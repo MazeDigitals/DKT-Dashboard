@@ -35,7 +35,7 @@ Route::get('/storage-link', function () {
     return 'migration refreshed';
 });
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
 });
 
