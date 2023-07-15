@@ -25,7 +25,7 @@ class BlogFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'category' => 'required|in:josh,dkt,okay,heer,dhanak,sheroz',
+            'category' => 'required|in:josh,dkt,okay,heer,dhanak,sheroz,sehatbaz',
             'image' => 'required|image',
             'content' => 'required',
             'title' => 'required'
