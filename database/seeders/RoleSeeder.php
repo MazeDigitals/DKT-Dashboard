@@ -20,17 +20,47 @@ class RoleSeeder extends Seeder
             'name' => 'SuperAdmin',
             'slug' => 'superadmin',
         ]);
-        
-        DB::table('roles')->insert([
-            'id' => 2,
-            'name' => 'Admin',
-            'slug' => 'admin',
-        ]);
 
         DB::table('roles')->insert([
             'id' => 3,
-            'name' => 'Customer',
-            'slug' => 'customer',
+            'name' => 'Josh',
+            'slug' => 'josh',
+        ]);
+
+        DB::table('roles')->insert([
+            'id' => 4,
+            'name' => 'DKT',
+            'slug' => 'dkt',
+        ]);
+
+        DB::table('roles')->insert([
+            'id' => 5,
+            'name' => 'Dhanak',
+            'slug' => 'dhanak',
+        ]);
+
+        DB::table('roles')->insert([
+            'id' => 6,
+            'name' => 'Heer',
+            'slug' => 'heer',
+        ]);
+
+        DB::table('roles')->insert([
+            'id' => 7,
+            'name' => 'Sehatbaz',
+            'slug' => 'sehatbaz',
+        ]);
+
+        DB::table('roles')->insert([
+            'id' => 8,
+            'name' => 'Sheroz',
+            'slug' => 'sheroz',
+        ]);
+        
+        DB::table('roles')->insert([
+            'id' => 9,
+            'name' => 'Okay',
+            'slug' => 'okay',
         ]);
 
     }
