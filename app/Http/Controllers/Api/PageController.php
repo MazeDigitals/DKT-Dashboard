@@ -25,11 +25,11 @@ class PageController extends Controller
     }
 
     public function getBlogCategory(){
-        $blogs = ['Josh','Dkt','Okay','Heer','Dhanak'];
+        $blogs = ['josh','dkt','okay','heer','dhanak','sheroz'];
         return $this->response(true,$blogs,'Blogs category fetch successfully',200);
     }
     public function getBlog($page){
-        $cat = ['Josh','Dkt','Okay','Heer','Dhanak'];
+        $cat = ['josh','dkt','okay','heer','dhanak','sheroz'];
         if(!in_array($page,$cat)){
             return $this->response(false,null,'Invalid Page name',422);
         }

@@ -54,6 +54,6 @@ class RouteServiceProvider extends ServiceProvider
 
     protected function forceHttps()
     {
-        // resolve(\Illuminate\Routing\UrlGenerator::class)->forceScheme('https');
+        resolve(\Illuminate\Routing\UrlGenerator::class)->forceScheme('https');
     }
 }
