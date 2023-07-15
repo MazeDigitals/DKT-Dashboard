@@ -46,7 +46,30 @@ class AdminPageController extends Controller
 
     private function getModelCollection($request, $with=[]){
         $with = array_merge([], $with);
-        $query = Page::where('id','<>',0);
+        if(auth()->user()->role_id == 3){
+            $query = Page::where('id',6);
+        }
+        else if(auth()->user()->role_id == 4){
+            $query = Page::where('id',1);
+        }
+        else if(auth()->user()->role_id == 5){
+            $query = Page::where('id',3);
+        }
+        else if(auth()->user()->role_id == 6){
+            $query = Page::where('id',4);
+        }
+        else if(auth()->user()->role_id == 7){
+            $query = Page::where('id',2);
+        }
+        else if(auth()->user()->role_id == 8){
+            $query = Page::where('id',7);
+        }
+        else if(auth()->user()->role_id == 9){
+            $query = Page::where('id',5);
+        }
+        else if(auth()->user()->role_id == 1){
+            $query = Page::where('id','<>',0);
+        }
         $query = $query->with($with);
 
         return $query;

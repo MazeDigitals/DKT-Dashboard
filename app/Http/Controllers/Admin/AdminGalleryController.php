@@ -47,7 +47,30 @@ class AdminGalleryController extends Controller
 
     private function getModelCollection($request, $with=[]){
         $with = array_merge([], $with);
-        $query = Gallery::where('id','<>',0);
+        if(auth()->user()->role_id == 3){
+            $query = Gallery::where('id',6);
+        }
+        else if(auth()->user()->role_id == 4){
+            $query = Gallery::where('id',1);
+        }
+        else if(auth()->user()->role_id == 5){
+            $query = Gallery::where('id',3);
+        }
+        else if(auth()->user()->role_id == 6){
+            $query = Gallery::where('id',4);
+        }
+        else if(auth()->user()->role_id == 7){
+            $query = Gallery::where('id',2);
+        }
+        else if(auth()->user()->role_id == 8){
+            $query = Gallery::where('id',7);
+        }
+        else if(auth()->user()->role_id == 9){
+            $query = Gallery::where('id',5);
+        }
+        else if(auth()->user()->role_id == 1){
+            $query = Gallery::where('id','<>',0);
+        }
         $query = $query->with($with);
 
         return $query;

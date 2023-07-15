@@ -32,11 +32,9 @@
                     <label for="category" class="w-100 text-left">Category <span class="text-danger">*</span> </label>
                     <select class="form-control" name="category" required>
                         <option>--Select--</option>
-                        <option value="Josh">Josh</option>
-                        <option value="Dkt">Dkt</option>
-                        <option value="Okay">Okay</option>
-                        <option value="Dhanak">Dhanak</option>
-                        <option value="Heer">Heer</option>
+                        @foreach($arr as $ar)
+                        <option value={{strtolower($ar)}}>{{$ar}}</option>
+                        @endforeach
                     </select>
                     @error('category')
                         <div class="invalid-feedback"> {{$message}} </div>

@@ -63,6 +63,30 @@ class AdminBlogController extends Controller
 
     private function getArrangedData($id=null) {
         // $data['roles'] = Role::getPortalRoles();
+        if(auth()->user()->role_id == 3){
+            $data['arr'] = ['Josh'];
+        }
+        else if(auth()->user()->role_id == 4){
+            $data['arr'] = ['Dkt'];
+        }
+        else if(auth()->user()->role_id == 5){
+            $data['arr'] = ['Dhanak'];
+        }
+        else if(auth()->user()->role_id == 6){
+            $data['arr'] = ['Heer'];
+        }
+        else if(auth()->user()->role_id == 7){
+            $data['arr'] = ['Sehatbaz'];
+        }
+        else if(auth()->user()->role_id == 8){
+            $data['arr'] = ['Sheroz'];
+        }
+        else if(auth()->user()->role_id == 9){
+            $data['arr'] = ['Okay'];
+        }
+        else if(auth()->user()->role_id == 1){
+            $data['arr'] = ['Dkt','Josh','Okay','Heer','Dhanak','Sehatbaz','Sheroz'];
+        }
         if($id){
             $data['title'] = 'Update Blog';
             $data['blog'] = Blogs::getByEid($id);
